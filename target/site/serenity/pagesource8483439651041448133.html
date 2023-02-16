@@ -1,0 +1,803 @@
+<html lang='en'><head><link href='prism/prism.css' rel='stylesheet' /></head><body><script src='prism/prism.js'></script><body><div><pre><code class='language-html'>&lt;html&gt;<br/>
+ &lt;head&gt;<br/>
+  &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;<br/>
+  &lt;script src="https://partner.googleadservices.com/gampad/cookie.js?domain=demoqa.com&amp;callback=_gfp_s_&amp;client=ca-pub-5889298451609146"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" async src="https://www.gstatic.com/recaptcha/releases/RGRQD9tdxHtnt-Bxkx9pM75S/recaptcha__es_419.js" crossorigin="anonymous" integrity="sha384-L1LQQMxptK285sDJd/WhAqOTqVbdEmpobYYrlTQ2Y3810azDXLnHCK90OzfDGd2q"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" async src="https://www.googletagmanager.com/gtag/js?id=G-MVRXK93D28&amp;l=dataLayer&amp;cx=c"&gt;&lt;/script&gt;<br/>
+  &lt;script type="text/javascript" async src="https://www.google-analytics.com/analytics.js"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202301170101/show_ads_impl_fy2021.js?bust=31071765" id="google_shimpl"&gt;&lt;/script&gt;<br/>
+  &lt;script async src="https://www.googletagmanager.com/gtm.js?id=GTM-MX8DD4S"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"&gt;&lt;/script&gt;<br/>
+  &lt;script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"&gt;&lt;/script&gt;<br/>
+  &lt;link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"&gt;<br/>
+  &lt;script async&gt;async function detectAdBlock(){let e=!1;try{await fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")).catch(t=&gt;e=!0)}catch(t){e=!1}finally{!0===e&&dataLayer.push({event:"Ad Blocker"}),console.log("AdBlock Enabled: "+e)}}detectAdBlock()&lt;/script&gt;<br/>
+  &lt;script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5889298451609146" crossorigin="anonymous" data-checked-head="true"&gt;&lt;/script&gt;<br/>
+  &lt;title&gt;ToolsQA&lt;/title&gt;<br/>
+  &lt;meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="&gt;<br/>
+  &lt;meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="&gt;<br/>
+  &lt;meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="&gt;<br/>
+  &lt;script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_2023012301.js?cb=31071867" async&gt;&lt;/script&gt;<br/>
+  &lt;meta http-equiv="origin-trial" content="Az6AfRvI8mo7yiW5fLfj04W21t0ig6aMsGYpIqMTaX60H+b0DkO1uDr+7BrzMcimWzv/X7SXR8jI+uvbV0IJlwYAAACFeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="&gt;<br/>
+  &lt;meta http-equiv="origin-trial" content="A+USTya+tNvDPaxUgJooz+LaVk5hPoAxpLvSxjogX4Mk8awCTQ9iop6zJ9d5ldgU7WmHqBlnQB41LHHRFxoaBwoAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="&gt;<br/>
+  &lt;meta http-equiv="origin-trial" content="A7FovoGr67TUBYbnY+Z0IKoJbbmRmB8fCyirUGHavNDtD91CiGyHHSA2hDG9r9T3NjUKFi6egL3RbgTwhhcVDwUAAACLeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="&gt;<br/>
+  &lt;link rel="preload" href="https://adservice.google.com.co/adsid/integrator.js?domain=demoqa.com" as="script"&gt;<br/>
+  &lt;script type="text/javascript" src="https://adservice.google.com.co/adsid/integrator.js?domain=demoqa.com"&gt;&lt;/script&gt;<br/>
+  &lt;link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=demoqa.com" as="script"&gt;<br/>
+  &lt;script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=demoqa.com"&gt;&lt;/script&gt;<br/>
+  &lt;link rel="preload" href="https://adservice.google.com.co/adsid/integrator.js?domain=demoqa.com" as="script"&gt;<br/>
+  &lt;script type="text/javascript" src="https://adservice.google.com.co/adsid/integrator.js?domain=demoqa.com"&gt;&lt;/script&gt;<br/>
+  &lt;link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=demoqa.com" as="script"&gt;<br/>
+  &lt;script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=demoqa.com"&gt;&lt;/script&gt;<br/>
+  &lt;script esp-signal="true" src="https://invstatic101.creativecdn.com/encrypted-signals/encrypted-tag-g.js"&gt;&lt;/script&gt;<br/>
+  &lt;script esp-signal="true" src="https://tags.crwdcntrl.net/lt/c/16589/sync.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script esp-signal="true" src="https://cdn.prod.uidapi.com/uid2SecureSignal.js"&gt;&lt;/script&gt;<br/>
+  &lt;script esp-signal="true" src="https://cdn.id5-sync.com/api/1.0/esp.js"&gt;&lt;/script&gt;<br/>
+  &lt;script esp-signal="true" src="https://cdn.jsdelivr.net/gh/prebid/shared-id/pubcid.js/docs/pubcid.min.js"&gt;&lt;/script&gt;<br/>
+  &lt;script esp-signal="true" src="https://static.criteo.net/js/ld/publishertag.ids.js"&gt;&lt;/script&gt;<br/>
+  &lt;script esp-signal="true" src="https://oa.openxcdn.net/esp.js"&gt;&lt;/script&gt;<br/>
+  &lt;meta http-equiv="origin-trial" content="A/vXSuiuvzsL+Db89QNS/YzqK5Wmzx9oASGHZVMjcaWfVdbB6eUJrJGNr7uhrsmiGhryVjVALd72agYzELDTMAgAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5uZXQ6NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY2OTc2NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="&gt;<br/>
+  &lt;meta http-equiv="origin-trial" content="A0KGawWMfAygakxUO+Z3rulPwK2j0AqkLneiEt4pAI951GYaafeHNV9Ya+PAn7s0y12QSrfTjc9LdOUU+QfkdQwAAACAeyJvcmlnaW4iOiJodHRwczovL2NyaXRlby5jb206NDQzIiwiZmVhdHVyZSI6IlByaXZhY3lTYW5kYm94QWRzQVBJcyIsImV4cGlyeSI6MTY2OTc2NjM5OSwiaXNTdWJkb21haW4iOnRydWUsImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="&gt;<br/>
+  &lt;script src="https://cdn.ad.plus/player/adplus.js"&gt;&lt;/script&gt;<br/>
+  &lt;link rel="preload" href="https://adservice.google.com.co/adsid/integrator.js?domain=demoqa.com" as="script"&gt;<br/>
+  &lt;script type="text/javascript" src="https://adservice.google.com.co/adsid/integrator.js?domain=demoqa.com"&gt;&lt;/script&gt;<br/>
+  &lt;link rel="preload" href="https://adservice.google.com/adsid/integrator.js?domain=demoqa.com" as="script"&gt;<br/>
+  &lt;script type="text/javascript" src="https://adservice.google.com/adsid/integrator.js?domain=demoqa.com"&gt;&lt;/script&gt;<br/>
+  &lt;style data-emotion="css"&gt;&lt;/style&gt;<br/>
+ &lt;/head&gt;<br/>
+ &lt;body&gt;<br/>
+  &lt;div id="fixedban" style="width:100%;margin:auto;text-align:center;float:none;overflow:hidden;display:scroll;position:fixed;bottom:0;z-index:9999999"&gt;<br/>
+   &lt;div style="text-align:center;display:block;max-width:970px;height:auto;overflow:hidden;margin:auto"&gt;<br/>
+    &lt;script async src="https://www.googletagservices.com/tag/js/gpt.js"&gt;&lt;/script&gt;<br/>
+    &lt;script&gt;var gptadslots=[],googletag=googletag||{cmd:[]}&lt;/script&gt;<br/>
+    &lt;script&gt;googletag.cmd.push((function(){var e=googletag.sizeMapping().addSize([0,0],[[320,50],[300,75],[300,50]]).addSize([730,200],[[728,90],[468,60]]).addSize([975,200],[[970,90],[728,90],[960,90],[750,100],[950,90],[468,60]]).build();gptadslots.push(googletag.defineSlot("/21849154601,22343295815/Ad.Plus-Anchor",[[320,100]],"adplus-anchor").setTargeting("site",["demoqa.com"]).defineSizeMapping(e).addService(googletag.pubads())),googletag.enableServices()}))&lt;/script&gt;<br/>
+    &lt;div&gt;<br/>
+     &lt;a id="close-fixedban" onclick="document.getElementById(&quot;fixedban&amp;apos&quot;).style.display=&quot;none&amp;apos&quot;" style="cursor:pointer"&gt;&lt;img src="https://ad.plus/adplus-advertising.svg" alt="adplus-dvertising" title="Ad.Plus Advertising" style="vertical-align:middle"&gt;&lt;/a&gt;<br/>
+    &lt;/div&gt;<br/>
+    &lt;div id="adplus-anchor" data-google-query-id="CNuuhLv-5_wCFUsUigMdz7oLyA"&gt;<br/>
+     &lt;div id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0__container__" style="border: 0pt none; display: inline-block; width: 728px; height: 90px;"&gt;<br/>
+      &lt;iframe frameborder="0" src="https://8053b1a54dd3c26e25260f8a7f26937d.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-Anchor_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="728" height="90" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true"&gt;&lt;/iframe&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;script&gt;!function(e,t,a,n,g){e[n]=e[n]||[],e[n].push({"gtm.start":(new Date).getTime(),event:"gtm.js"});var m=t.getElementsByTagName(a)[0],r=t.createElement(a);r.async=!0,r.src="https://www.googletagmanager.com/gtm.js?id=GTM-MX8DD4S",m.parentNode.insertBefore(r,m)}(window,document,"script","dataLayer")&lt;/script&gt;&lt;iframe src="https://8053b1a54dd3c26e25260f8a7f26937d.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" style="visibility: hidden; display: none;"&gt;&lt;/iframe&gt;<br/>
+  &lt;link rel="shortcut icon" href="/favicon.png"&gt;<br/>
+  &lt;link href="/main.css" rel="stylesheet"&gt;<br/>
+  &lt;ins class="adsbygoogle adsbygoogle-noablate" data-adsbygoogle-status="done" style="display: none !important;" data-ad-status="unfilled"&gt;<br/>
+   &lt;div id="aswift_0_host" style="border: none; height: 0px; width: 0px; margin: 0px; padding: 0px; position: relative; visibility: visible; background-color: transparent; display: inline-block;" tabindex="0" title="Advertisement" aria-label="Advertisement"&gt;<br/>
+    &lt;iframe id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;border:0;width:undefinedpx;height:undefinedpx;" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" src="https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-5889298451609146&amp;output=html&amp;adk=1812271804&amp;adf=3025194257&amp;lmt=1656713906&amp;plat=1%3A1024%2C2%3A1024%2C3%3A2097152%2C4%3A2097152%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32&amp;format=0x0&amp;url=https%3A%2F%2Fdemoqa.com%2F&amp;ea=0&amp;pra=5&amp;wgl=1&amp;uach=WyJXaW5kb3dzIiwiMTAuMC4wIiwieDg2IiwiIiwiMTA5LjAuNTQxNC43NCIsW10sZmFsc2UsbnVsbCwiNjQiLFtbIk5vdF9BIEJyYW5kIiwiOTkuMC4wLjAiXSxbIkdvb2dsZSBDaHJvbWUiLCIxMDkuMC41NDE0Ljc0Il0sWyJDaHJvbWl1bSIsIjEwOS4wLjU0MTQuNzQiXV0sZmFsc2Vd&amp;dt=1674830674216&amp;bpp=2&amp;bdt=491&amp;idt=437&amp;shv=r20230124&amp;mjsv=m202301170101&amp;ptt=9&amp;saldr=aa&amp;abxe=1&amp;nras=1&amp;correlator=4116899308314&amp;frm=20&amp;pv=2&amp;ga_vid=2098177791.1674830674&amp;ga_sid=1674830674&amp;ga_hid=1301624248&amp;ga_fc=1&amp;u_tz=-300&amp;u_his=2&amp;u_h=768&amp;u_w=1366&amp;u_ah=738&amp;u_aw=1366&amp;u_cd=24&amp;u_sd=1&amp;dmc=8&amp;adx=-12245933&amp;ady=-12245933&amp;biw=1366&amp;bih=622&amp;scr_x=0&amp;scr_y=0&amp;eid=44759876%2C44759927%2C44759837%2C31071755%2C31071765%2C44781118%2C21065725%2C31071974&amp;oid=2&amp;pvsid=4036769562664839&amp;tmod=929604602&amp;uas=0&amp;nvt=1&amp;eae=2&amp;fc=1920&amp;brdim=0%2C0%2C0%2C0%2C1366%2C0%2C1366%2C738%2C1366%2C622&amp;vis=1&amp;rsz=%7C%7Cs%7C&amp;abl=NS&amp;fu=32768&amp;bc=31&amp;ifi=1&amp;uci=a!1&amp;fsb=1&amp;dtd=457" data-google-container-id="a!1" data-load-complete="true"&gt;&lt;/iframe&gt;<br/>
+   &lt;/div&gt;&lt;/ins&gt;<br/>
+  &lt;noscript&gt;<br/>
+   &lt;iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MX8DD4S" height="0" width="0" style="display:none;visibility:hidden"&gt;&lt;/iframe&gt;<br/>
+  &lt;/noscript&gt;<br/>
+  &lt;div id="app"&gt;<br/>
+   &lt;header&gt;<br/>
+    &lt;a href="https://demoqa.com"&gt;&lt;img src="/images/Toolsqa.jpg"&gt;&lt;/a&gt;<br/>
+   &lt;/header&gt;<br/>
+   &lt;div class="body-height"&gt;<br/>
+    &lt;div class="container playgound-body"&gt;<br/>
+     &lt;div class="pattern-backgound playgound-header"&gt;<br/>
+      &lt;div class="main-header"&gt;<br/>
+       Practice Form<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+     &lt;div class="row"&gt;<br/>
+      &lt;div class="col-12 mt-4  col-md-3"&gt;<br/>
+       &lt;nav class="navbar navbar-dark bg-dark left-menu-nav-bar"&gt;<br/>
+        &lt;button class="navbar-toggler" type="button"&gt;&lt;span class="navbar-toggler-icon"&gt;&lt;/span&gt;&lt;/button&gt;<br/>
+       &lt;/nav&gt;<br/>
+       &lt;div class="left-pannel"&gt;<br/>
+        &lt;div class="accordion"&gt;<br/>
+         &lt;div class="element-group"&gt;<br/>
+          &lt;span class="group-header"&gt;<br/>
+           &lt;div class="header-wrapper" style="background: rgb(108, 117, 125);"&gt;<br/>
+            &lt;div class="header-text"&gt;<br/>
+             &lt;span class="pr-1"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;path d="M16 132h416c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H16C7.163 60 0 67.163 0 76v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;Elements<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="header-right"&gt;<br/>
+             &lt;div class="separator"&gt;<br/>
+              &nbsp;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class="icon"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;g&gt;<br/>
+                &lt;path fill="none" d="M0 0h24v24H0z"&gt;&lt;/path&gt;<br/>
+                &lt;path d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"&gt;&lt;/path&gt;<br/>
+               &lt;/g&gt;<br/>
+              &lt;/svg&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/span&gt;<br/>
+          &lt;div class="element-list collapse"&gt;<br/>
+           &lt;ul class="menu-list"&gt;<br/>
+            &lt;li class="btn btn-light " id="item-0"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Text Box&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-1"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Check Box&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-2"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Radio Button&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-3"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Web Tables&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-4"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Buttons&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-5"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Links&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-6"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Broken Links - Images&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-7"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Upload and Download&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-8"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Dynamic Properties&lt;/span&gt;&lt;/li&gt;<br/>
+           &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="element-group"&gt;<br/>
+          &lt;span class="group-header"&gt;<br/>
+           &lt;div class="header-wrapper" style="background: rgb(108, 117, 125);"&gt;<br/>
+            &lt;div class="header-text"&gt;<br/>
+             &lt;span class="pr-1"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" version="1.2" baseprofile="tiny" viewbox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;g&gt;<br/>
+                &lt;path d="M17 21h-10c-1.654 0-3-1.346-3-3v-12c0-1.654 1.346-3 3-3h10c1.654 0 3 1.346 3 3v12c0 1.654-1.346 3-3 3zm-10-16c-.551 0-1 .449-1 1v12c0 .551.449 1 1 1h10c.551 0 1-.449 1-1v-12c0-.551-.449-1-1-1h-10zM16 11h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5zM16 8h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5zM16 14h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5zM16 17h-8c-.276 0-.5-.224-.5-.5s.224-.5.5-.5h8c.276 0 .5.224.5.5s-.224.5-.5.5z"&gt;&lt;/path&gt;<br/>
+               &lt;/g&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;Forms<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="header-right"&gt;<br/>
+             &lt;div class="separator"&gt;<br/>
+              &nbsp;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class="icon"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;g&gt;<br/>
+                &lt;path fill="none" d="M0 0h24v24H0z"&gt;&lt;/path&gt;<br/>
+                &lt;path d="M3 19h18v2H3v-2zM13 5.828V17h-2V5.828L4.929 11.9l-1.414-1.414L12 2l8.485 8.485-1.414 1.414L13 5.83z"&gt;&lt;/path&gt;<br/>
+               &lt;/g&gt;<br/>
+              &lt;/svg&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/span&gt;<br/>
+          &lt;div class="element-list collapse show"&gt;<br/>
+           &lt;ul class="menu-list"&gt;<br/>
+            &lt;li class="btn btn-light active" id="item-0"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Practice Form&lt;/span&gt;&lt;/li&gt;<br/>
+           &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="element-group"&gt;<br/>
+          &lt;span class="group-header"&gt;<br/>
+           &lt;div class="header-wrapper" style="background: rgb(108, 117, 125);"&gt;<br/>
+            &lt;div class="header-text"&gt;<br/>
+             &lt;span class="pr-1"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 14 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;path fill-rule="evenodd" d="M5 3h1v1H5V3zM3 3h1v1H3V3zM1 3h1v1H1V3zm12 10H1V5h12v8zm0-9H7V3h6v1zm1-1c0-.55-.45-1-1-1H1c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1V3z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;Alerts, Frame &amp; Windows<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="header-right"&gt;<br/>
+             &lt;div class="separator"&gt;<br/>
+              &nbsp;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class="icon"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;g&gt;<br/>
+                &lt;path fill="none" d="M0 0h24v24H0z"&gt;&lt;/path&gt;<br/>
+                &lt;path d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"&gt;&lt;/path&gt;<br/>
+               &lt;/g&gt;<br/>
+              &lt;/svg&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/span&gt;<br/>
+          &lt;div class="element-list collapse"&gt;<br/>
+           &lt;ul class="menu-list"&gt;<br/>
+            &lt;li class="btn btn-light " id="item-0"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Browser Windows&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-1"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Alerts&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-2"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Frames&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-3"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Nested Frames&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-4"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Modal Dialogs&lt;/span&gt;&lt;/li&gt;<br/>
+           &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="element-group"&gt;<br/>
+          &lt;span class="group-header"&gt;<br/>
+           &lt;div class="header-wrapper" style="background: rgb(108, 117, 125);"&gt;<br/>
+            &lt;div class="header-text"&gt;<br/>
+             &lt;span class="pr-1"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;path d="M13 13v8h8v-8h-8zM3 21h8v-8H3v8zM3 3v8h8V3H3zm13.66-1.31L11 7.34 16.66 13l5.66-5.66-5.66-5.65z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;Widgets<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="header-right"&gt;<br/>
+             &lt;div class="separator"&gt;<br/>
+              &nbsp;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class="icon"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;g&gt;<br/>
+                &lt;path fill="none" d="M0 0h24v24H0z"&gt;&lt;/path&gt;<br/>
+                &lt;path d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"&gt;&lt;/path&gt;<br/>
+               &lt;/g&gt;<br/>
+              &lt;/svg&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/span&gt;<br/>
+          &lt;div class="element-list collapse"&gt;<br/>
+           &lt;ul class="menu-list"&gt;<br/>
+            &lt;li class="btn btn-light " id="item-0"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Accordian&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-1"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Auto Complete&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-2"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Date Picker&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-3"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Slider&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-4"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Progress Bar&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-5"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Tabs&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-6"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Tool Tips&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-7"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Menu&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-8"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Select Menu&lt;/span&gt;&lt;/li&gt;<br/>
+           &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="element-group"&gt;<br/>
+          &lt;span class="group-header"&gt;<br/>
+           &lt;div class="header-wrapper" style="background: rgb(108, 117, 125);"&gt;<br/>
+            &lt;div class="header-text"&gt;<br/>
+             &lt;span class="pr-1"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM726 585.7c0 55.3-44.7 100.1-99.7 100.1H420.6v53.4c0 5.7-6.5 8.8-10.9 5.3l-109.1-85.7c-3.5-2.7-3.5-8 0-10.7l109.1-85.7c4.4-3.5 10.9-.3 10.9 5.3v53.4h205.7c19.6 0 35.5-16 35.5-35.6v-78.9c0-3.7 3-6.8 6.8-6.8h50.7c3.7 0 6.8 3 6.8 6.8v79.1zm-2.6-209.9l-109.1 85.7c-4.4 3.5-10.9.3-10.9-5.3v-53.4H397.7c-19.6 0-35.5 16-35.5 35.6v78.9c0 3.7-3 6.8-6.8 6.8h-50.7c-3.7 0-6.8-3-6.8-6.8v-78.9c0-55.3 44.7-100.1 99.7-100.1h205.7v-53.4c0-5.7 6.5-8.8 10.9-5.3l109.1 85.7c3.6 2.5 3.6 7.8.1 10.5z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;Interactions<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="header-right"&gt;<br/>
+             &lt;div class="separator"&gt;<br/>
+              &nbsp;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class="icon"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;g&gt;<br/>
+                &lt;path fill="none" d="M0 0h24v24H0z"&gt;&lt;/path&gt;<br/>
+                &lt;path d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"&gt;&lt;/path&gt;<br/>
+               &lt;/g&gt;<br/>
+              &lt;/svg&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/span&gt;<br/>
+          &lt;div class="element-list collapse"&gt;<br/>
+           &lt;ul class="menu-list"&gt;<br/>
+            &lt;li class="btn btn-light " id="item-0"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Sortable&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-1"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Selectable&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-2"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Resizable&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-3"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Droppable&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-4"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Dragabble&lt;/span&gt;&lt;/li&gt;<br/>
+           &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="element-group"&gt;<br/>
+          &lt;span class="group-header"&gt;<br/>
+           &lt;div class="header-wrapper" style="background: rgb(108, 117, 125);"&gt;<br/>
+            &lt;div class="header-text"&gt;<br/>
+             &lt;span class="pr-1"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;path d="M169 57v430h78V57h-78zM25 105v190h46V105H25zm158 23h18v320h-18V128zm128.725 7.69l-45.276 8.124 61.825 344.497 45.276-8.124-61.825-344.497zM89 153v270h62V153H89zm281.502 28.68l-27.594 11.773 5.494 12.877 27.594-11.773-5.494-12.877zm12.56 29.433l-27.597 11.772 5.494 12.877 27.593-11.772-5.492-12.877zm12.555 29.434l-27.594 11.77 99.674 233.628 27.594-11.773-99.673-233.625zM25 313v30h46v-30H25zm190 7h18v128h-18V320zM25 361v126h46V361H25zm64 80v46h62v-46H89z"&gt;&lt;/path&gt;<br/>
+              &lt;/svg&gt;&lt;/span&gt;Book Store Application<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="header-right"&gt;<br/>
+             &lt;div class="separator"&gt;<br/>
+              &nbsp;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class="icon"&gt;<br/>
+              &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+               &lt;g&gt;<br/>
+                &lt;path fill="none" d="M0 0h24v24H0z"&gt;&lt;/path&gt;<br/>
+                &lt;path d="M3 19h18v2H3v-2zm10-5.828L19.071 7.1l1.414 1.414L12 17 3.515 8.515 4.929 7.1 11 13.17V2h2v11.172z"&gt;&lt;/path&gt;<br/>
+               &lt;/g&gt;<br/>
+              &lt;/svg&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;&lt;/span&gt;<br/>
+          &lt;div class="element-list collapse"&gt;<br/>
+           &lt;ul class="menu-list"&gt;<br/>
+            &lt;li class="btn btn-light " id="item-0"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Login&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-2"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Book Store&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-3"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Profile&lt;/span&gt;&lt;/li&gt;<br/>
+            &lt;li class="btn btn-light " id="item-4"&gt;<br/>
+             &lt;svg stroke="currentColor" fill="currentColor" stroke-width="0" viewbox="0 0 1024 1024" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"&gt;<br/>
+              &lt;path d="M145.2 96l66 746.6L512 928l299.6-85.4L878.9 96H145.2zm595 177.1l-4.8 47.2-1.7 19.5H382.3l8.2 94.2h335.1l-3.3 24.3-21.2 242.2-1.7 16.2-187 51.6v.3h-1.2l-.3.1v-.1h-.1l-188.6-52L310.8 572h91.1l6.5 73.2 102.4 27.7h.4l102-27.6 11.4-118.6H510.9v-.1H306l-22.8-253.5-1.7-24.3h460.3l-1.6 24.3z"&gt;&lt;/path&gt;<br/>
+             &lt;/svg&gt;&lt;span class="text"&gt;Book Store API&lt;/span&gt;&lt;/li&gt;<br/>
+           &lt;/ul&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="col-12 mt-4 col-md-6"&gt;<br/>
+       &lt;div id="Ad.Plus-728x90" data-google-query-id="CKaCu7z-5_wCFSTmKAUd5fAEyQ" style="width: 631px; height: 88px;"&gt;<br/>
+        &lt;div id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-728x90_0__container__" style="border: 0pt none; width: 631px; height: 88px;"&gt;<br/>
+         &lt;iframe id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-728x90_0" name="google_ads_iframe_/21849154601,22343295815/Ad.Plus-728x90_0" title="3rd party ad content" width="631" height="90" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" role="region" aria-label="Advertisement" tabindex="0" style="border: 0px; vertical-align: bottom; width: 631px; height: 88px;" data-load-complete="true" data-google-container-id="2"&gt;&lt;/iframe&gt;<br/>
+        &lt;/div&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div class="practice-form-wrapper"&gt;<br/>
+        &lt;h5&gt;Student Registration Form&lt;/h5&gt;<br/>
+        &lt;form novalidate id="userForm" class=""&gt;<br/>
+         &lt;div id="userName-wrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           &lt;label class="form-label" id="userName-label"&gt;Name&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-4 col-sm-6"&gt;<br/>
+           &lt;input required autocomplete="off" placeholder="First Name" type="text" id="firstName" class=" mr-sm-2 form-control"&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-1 col-sm-0"&gt;&lt;/div&gt;<br/>
+          &lt;div class="col-md-4 col-sm-6"&gt;<br/>
+           &lt;input required autocomplete="off" placeholder="Last Name" type="text" id="lastName" class=" mr-sm-2 form-control"&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div id="userEmail-wrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           &lt;label class="form-label" id="userEmail-label"&gt;Email&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-9 col-sm-12"&gt;<br/>
+           &lt;input autocomplete="off" pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" placeholder="name@example.com" type="text" id="userEmail" class="mr-sm-2 form-control"&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div id="genterWrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           Gender<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-9 col-sm-12"&gt;<br/>
+           &lt;div class="custom-control custom-radio custom-control-inline"&gt;<br/>
+            &lt;input name="gender" required type="radio" id="gender-radio-1" class="custom-control-input" value="Male"&gt;&lt;label title="" for="gender-radio-1" class="custom-control-label"&gt;Male&lt;/label&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="custom-control custom-radio custom-control-inline"&gt;<br/>
+            &lt;input name="gender" required type="radio" id="gender-radio-2" class="custom-control-input" value="Female"&gt;&lt;label title="" for="gender-radio-2" class="custom-control-label"&gt;Female&lt;/label&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="custom-control custom-radio custom-control-inline"&gt;<br/>
+            &lt;input name="gender" required type="radio" id="gender-radio-3" class="custom-control-input" value="Other"&gt;&lt;label title="" for="gender-radio-3" class="custom-control-label"&gt;Other&lt;/label&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div id="userNumber-wrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           &lt;label class="form-label" id="userNumber-label"&gt;Mobile&lt;small&gt;(10 Digits)&lt;/small&gt;&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-9 col-sm-12"&gt;<br/>
+           &lt;input required autocomplete="off" pattern="\d*" minlength="10" maxlength="10" placeholder="Mobile Number" type="text" id="userNumber" class=" mr-sm-2 form-control"&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div id="dateOfBirth-wrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           &lt;label class="form-label" id="dateOfBirth-label"&gt;Date of Birth&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div id="dateOfBirth" class="col-md-9 col-sm-12"&gt;<br/>
+           &lt;div class="react-datepicker-wrapper"&gt;<br/>
+            &lt;div class="react-datepicker__input-container"&gt;<br/>
+             &lt;input type="text" id="dateOfBirthInput" class="form-control react-datepicker-ignore-onclickoutside" value="27 Jan 202307/21/1998"&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="react-datepicker__tab-loop"&gt;<br/>
+            &lt;div class="react-datepicker__tab-loop__start" tabindex="0"&gt;&lt;/div&gt;<br/>
+            &lt;div class="react-datepicker-popper" data-placement="top-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(15px, -309px, 0px);"&gt;<br/>
+             &lt;div&gt;<br/>
+              &lt;div class="react-datepicker"&gt;<br/>
+               &lt;div class="react-datepicker__triangle"&gt;&lt;/div&gt;&lt;button type="button" class="react-datepicker__navigation react-datepicker__navigation--previous" aria-label="Previous Month"&gt;Previous Month&lt;/button&gt;&lt;button type="button" class="react-datepicker__navigation react-datepicker__navigation--next" aria-label="Next Month"&gt;Next Month&lt;/button&gt;<br/>
+               &lt;div class="react-datepicker__month-container"&gt;<br/>
+                &lt;div class="react-datepicker__header"&gt;<br/>
+                 &lt;div class="react-datepicker__current-month react-datepicker__current-month--hasYearDropdown react-datepicker__current-month--hasMonthDropdown"&gt;<br/>
+                  January 202307<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="react-datepicker__header__dropdown react-datepicker__header__dropdown--select"&gt;<br/>
+                  &lt;div class="react-datepicker__month-dropdown-container react-datepicker__month-dropdown-container--select"&gt;<br/>
+                   &lt;select class="react-datepicker__month-select"&gt;&lt;option value="0"&gt;January&lt;/option&gt;&lt;option value="1"&gt;February&lt;/option&gt;&lt;option value="2"&gt;March&lt;/option&gt;&lt;option value="3"&gt;April&lt;/option&gt;&lt;option value="4"&gt;May&lt;/option&gt;&lt;option value="5"&gt;June&lt;/option&gt;&lt;option value="6"&gt;July&lt;/option&gt;&lt;option value="7"&gt;August&lt;/option&gt;&lt;option value="8"&gt;September&lt;/option&gt;&lt;option value="9"&gt;October&lt;/option&gt;&lt;option value="10"&gt;November&lt;/option&gt;&lt;option value="11"&gt;December&lt;/option&gt;&lt;/select&gt;<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__year-dropdown-container react-datepicker__year-dropdown-container--select"&gt;<br/>
+                   &lt;select class="react-datepicker__year-select"&gt;&lt;option value="1900"&gt;1900&lt;/option&gt;&lt;option value="1901"&gt;1901&lt;/option&gt;&lt;option value="1902"&gt;1902&lt;/option&gt;&lt;option value="1903"&gt;1903&lt;/option&gt;&lt;option value="1904"&gt;1904&lt;/option&gt;&lt;option value="1905"&gt;1905&lt;/option&gt;&lt;option value="1906"&gt;1906&lt;/option&gt;&lt;option value="1907"&gt;1907&lt;/option&gt;&lt;option value="1908"&gt;1908&lt;/option&gt;&lt;option value="1909"&gt;1909&lt;/option&gt;&lt;option value="1910"&gt;1910&lt;/option&gt;&lt;option value="1911"&gt;1911&lt;/option&gt;&lt;option value="1912"&gt;1912&lt;/option&gt;&lt;option value="1913"&gt;1913&lt;/option&gt;&lt;option value="1914"&gt;1914&lt;/option&gt;&lt;option value="1915"&gt;1915&lt;/option&gt;&lt;option value="1916"&gt;1916&lt;/option&gt;&lt;option value="1917"&gt;1917&lt;/option&gt;&lt;option value="1918"&gt;1918&lt;/option&gt;&lt;option value="1919"&gt;1919&lt;/option&gt;&lt;option value="1920"&gt;1920&lt;/option&gt;&lt;option value="1921"&gt;1921&lt;/option&gt;&lt;option value="1922"&gt;1922&lt;/option&gt;&lt;option value="1923"&gt;1923&lt;/option&gt;&lt;option value="1924"&gt;1924&lt;/option&gt;&lt;option value="1925"&gt;1925&lt;/option&gt;&lt;option value="1926"&gt;1926&lt;/option&gt;&lt;option value="1927"&gt;1927&lt;/option&gt;&lt;option value="1928"&gt;1928&lt;/option&gt;&lt;option value="1929"&gt;1929&lt;/option&gt;&lt;option value="1930"&gt;1930&lt;/option&gt;&lt;option value="1931"&gt;1931&lt;/option&gt;&lt;option value="1932"&gt;1932&lt;/option&gt;&lt;option value="1933"&gt;1933&lt;/option&gt;&lt;option value="1934"&gt;1934&lt;/option&gt;&lt;option value="1935"&gt;1935&lt;/option&gt;&lt;option value="1936"&gt;1936&lt;/option&gt;&lt;option value="1937"&gt;1937&lt;/option&gt;&lt;option value="1938"&gt;1938&lt;/option&gt;&lt;option value="1939"&gt;1939&lt;/option&gt;&lt;option value="1940"&gt;1940&lt;/option&gt;&lt;option value="1941"&gt;1941&lt;/option&gt;&lt;option value="1942"&gt;1942&lt;/option&gt;&lt;option value="1943"&gt;1943&lt;/option&gt;&lt;option value="1944"&gt;1944&lt;/option&gt;&lt;option value="1945"&gt;1945&lt;/option&gt;&lt;option value="1946"&gt;1946&lt;/option&gt;&lt;option value="1947"&gt;1947&lt;/option&gt;&lt;option value="1948"&gt;1948&lt;/option&gt;&lt;option value="1949"&gt;1949&lt;/option&gt;&lt;option value="1950"&gt;1950&lt;/option&gt;&lt;option value="1951"&gt;1951&lt;/option&gt;&lt;option value="1952"&gt;1952&lt;/option&gt;&lt;option value="1953"&gt;1953&lt;/option&gt;&lt;option value="1954"&gt;1954&lt;/option&gt;&lt;option value="1955"&gt;1955&lt;/option&gt;&lt;option value="1956"&gt;1956&lt;/option&gt;&lt;option value="1957"&gt;1957&lt;/option&gt;&lt;option value="1958"&gt;1958&lt;/option&gt;&lt;option value="1959"&gt;1959&lt;/option&gt;&lt;option value="1960"&gt;1960&lt;/option&gt;&lt;option value="1961"&gt;1961&lt;/option&gt;&lt;option value="1962"&gt;1962&lt;/option&gt;&lt;option value="1963"&gt;1963&lt;/option&gt;&lt;option value="1964"&gt;1964&lt;/option&gt;&lt;option value="1965"&gt;1965&lt;/option&gt;&lt;option value="1966"&gt;1966&lt;/option&gt;&lt;option value="1967"&gt;1967&lt;/option&gt;&lt;option value="1968"&gt;1968&lt;/option&gt;&lt;option value="1969"&gt;1969&lt;/option&gt;&lt;option value="1970"&gt;1970&lt;/option&gt;&lt;option value="1971"&gt;1971&lt;/option&gt;&lt;option value="1972"&gt;1972&lt;/option&gt;&lt;option value="1973"&gt;1973&lt;/option&gt;&lt;option value="1974"&gt;1974&lt;/option&gt;&lt;option value="1975"&gt;1975&lt;/option&gt;&lt;option value="1976"&gt;1976&lt;/option&gt;&lt;option value="1977"&gt;1977&lt;/option&gt;&lt;option value="1978"&gt;1978&lt;/option&gt;&lt;option value="1979"&gt;1979&lt;/option&gt;&lt;option value="1980"&gt;1980&lt;/option&gt;&lt;option value="1981"&gt;1981&lt;/option&gt;&lt;option value="1982"&gt;1982&lt;/option&gt;&lt;option value="1983"&gt;1983&lt;/option&gt;&lt;option value="1984"&gt;1984&lt;/option&gt;&lt;option value="1985"&gt;1985&lt;/option&gt;&lt;option value="1986"&gt;1986&lt;/option&gt;&lt;option value="1987"&gt;1987&lt;/option&gt;&lt;option value="1988"&gt;1988&lt;/option&gt;&lt;option value="1989"&gt;1989&lt;/option&gt;&lt;option value="1990"&gt;1990&lt;/option&gt;&lt;option value="1991"&gt;1991&lt;/option&gt;&lt;option value="1992"&gt;1992&lt;/option&gt;&lt;option value="1993"&gt;1993&lt;/option&gt;&lt;option value="1994"&gt;1994&lt;/option&gt;&lt;option value="1995"&gt;1995&lt;/option&gt;&lt;option value="1996"&gt;1996&lt;/option&gt;&lt;option value="1997"&gt;1997&lt;/option&gt;&lt;option value="1998"&gt;1998&lt;/option&gt;&lt;option value="1999"&gt;1999&lt;/option&gt;&lt;option value="2000"&gt;2000&lt;/option&gt;&lt;option value="2001"&gt;2001&lt;/option&gt;&lt;option value="2002"&gt;2002&lt;/option&gt;&lt;option value="2003"&gt;2003&lt;/option&gt;&lt;option value="2004"&gt;2004&lt;/option&gt;&lt;option value="2005"&gt;2005&lt;/option&gt;&lt;option value="2006"&gt;2006&lt;/option&gt;&lt;option value="2007"&gt;2007&lt;/option&gt;&lt;option value="2008"&gt;2008&lt;/option&gt;&lt;option value="2009"&gt;2009&lt;/option&gt;&lt;option value="2010"&gt;2010&lt;/option&gt;&lt;option value="2011"&gt;2011&lt;/option&gt;&lt;option value="2012"&gt;2012&lt;/option&gt;&lt;option value="2013"&gt;2013&lt;/option&gt;&lt;option value="2014"&gt;2014&lt;/option&gt;&lt;option value="2015"&gt;2015&lt;/option&gt;&lt;option value="2016"&gt;2016&lt;/option&gt;&lt;option value="2017"&gt;2017&lt;/option&gt;&lt;option value="2018"&gt;2018&lt;/option&gt;&lt;option value="2019"&gt;2019&lt;/option&gt;&lt;option value="2020"&gt;2020&lt;/option&gt;&lt;option value="2021"&gt;2021&lt;/option&gt;&lt;option value="2022"&gt;2022&lt;/option&gt;&lt;option value="2023"&gt;2023&lt;/option&gt;&lt;option value="2024"&gt;2024&lt;/option&gt;&lt;option value="2025"&gt;2025&lt;/option&gt;&lt;option value="2026"&gt;2026&lt;/option&gt;&lt;option value="2027"&gt;2027&lt;/option&gt;&lt;option value="2028"&gt;2028&lt;/option&gt;&lt;option value="2029"&gt;2029&lt;/option&gt;&lt;option value="2030"&gt;2030&lt;/option&gt;&lt;option value="2031"&gt;2031&lt;/option&gt;&lt;option value="2032"&gt;2032&lt;/option&gt;&lt;option value="2033"&gt;2033&lt;/option&gt;&lt;option value="2034"&gt;2034&lt;/option&gt;&lt;option value="2035"&gt;2035&lt;/option&gt;&lt;option value="2036"&gt;2036&lt;/option&gt;&lt;option value="2037"&gt;2037&lt;/option&gt;&lt;option value="2038"&gt;2038&lt;/option&gt;&lt;option value="2039"&gt;2039&lt;/option&gt;&lt;option value="2040"&gt;2040&lt;/option&gt;&lt;option value="2041"&gt;2041&lt;/option&gt;&lt;option value="2042"&gt;2042&lt;/option&gt;&lt;option value="2043"&gt;2043&lt;/option&gt;&lt;option value="2044"&gt;2044&lt;/option&gt;&lt;option value="2045"&gt;2045&lt;/option&gt;&lt;option value="2046"&gt;2046&lt;/option&gt;&lt;option value="2047"&gt;2047&lt;/option&gt;&lt;option value="2048"&gt;2048&lt;/option&gt;&lt;option value="2049"&gt;2049&lt;/option&gt;&lt;option value="2050"&gt;2050&lt;/option&gt;&lt;option value="2051"&gt;2051&lt;/option&gt;&lt;option value="2052"&gt;2052&lt;/option&gt;&lt;option value="2053"&gt;2053&lt;/option&gt;&lt;option value="2054"&gt;2054&lt;/option&gt;&lt;option value="2055"&gt;2055&lt;/option&gt;&lt;option value="2056"&gt;2056&lt;/option&gt;&lt;option value="2057"&gt;2057&lt;/option&gt;&lt;option value="2058"&gt;2058&lt;/option&gt;&lt;option value="2059"&gt;2059&lt;/option&gt;&lt;option value="2060"&gt;2060&lt;/option&gt;&lt;option value="2061"&gt;2061&lt;/option&gt;&lt;option value="2062"&gt;2062&lt;/option&gt;&lt;option value="2063"&gt;2063&lt;/option&gt;&lt;option value="2064"&gt;2064&lt;/option&gt;&lt;option value="2065"&gt;2065&lt;/option&gt;&lt;option value="2066"&gt;2066&lt;/option&gt;&lt;option value="2067"&gt;2067&lt;/option&gt;&lt;option value="2068"&gt;2068&lt;/option&gt;&lt;option value="2069"&gt;2069&lt;/option&gt;&lt;option value="2070"&gt;2070&lt;/option&gt;&lt;option value="2071"&gt;2071&lt;/option&gt;&lt;option value="2072"&gt;2072&lt;/option&gt;&lt;option value="2073"&gt;2073&lt;/option&gt;&lt;option value="2074"&gt;2074&lt;/option&gt;&lt;option value="2075"&gt;2075&lt;/option&gt;&lt;option value="2076"&gt;2076&lt;/option&gt;&lt;option value="2077"&gt;2077&lt;/option&gt;&lt;option value="2078"&gt;2078&lt;/option&gt;&lt;option value="2079"&gt;2079&lt;/option&gt;&lt;option value="2080"&gt;2080&lt;/option&gt;&lt;option value="2081"&gt;2081&lt;/option&gt;&lt;option value="2082"&gt;2082&lt;/option&gt;&lt;option value="2083"&gt;2083&lt;/option&gt;&lt;option value="2084"&gt;2084&lt;/option&gt;&lt;option value="2085"&gt;2085&lt;/option&gt;&lt;option value="2086"&gt;2086&lt;/option&gt;&lt;option value="2087"&gt;2087&lt;/option&gt;&lt;option value="2088"&gt;2088&lt;/option&gt;&lt;option value="2089"&gt;2089&lt;/option&gt;&lt;option value="2090"&gt;2090&lt;/option&gt;&lt;option value="2091"&gt;2091&lt;/option&gt;&lt;option value="2092"&gt;2092&lt;/option&gt;&lt;option value="2093"&gt;2093&lt;/option&gt;&lt;option value="2094"&gt;2094&lt;/option&gt;&lt;option value="2095"&gt;2095&lt;/option&gt;&lt;option value="2096"&gt;2096&lt;/option&gt;&lt;option value="2097"&gt;2097&lt;/option&gt;&lt;option value="2098"&gt;2098&lt;/option&gt;&lt;option value="2099"&gt;2099&lt;/option&gt;&lt;option value="2100"&gt;2100&lt;/option&gt;&lt;/select&gt;<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="react-datepicker__day-names"&gt;<br/>
+                  &lt;div class="react-datepicker__day-name"&gt;<br/>
+                   Su<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day-name"&gt;<br/>
+                   Mo<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day-name"&gt;<br/>
+                   Tu<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day-name"&gt;<br/>
+                   We<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day-name"&gt;<br/>
+                   Th<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day-name"&gt;<br/>
+                   Fr<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day-name"&gt;<br/>
+                   Sa<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/div&gt;<br/>
+                &lt;div class="react-datepicker__month" role="listbox" aria-label="month  202307-01"&gt;<br/>
+                 &lt;div class="react-datepicker__week"&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--030 react-datepicker__day--weekend react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Sunday, December 30th, 202306" role="option" aria-disabled="false"&gt;<br/>
+                   30<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--031 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Monday, December 31st, 202306" role="option" aria-disabled="false"&gt;<br/>
+                   31<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--001" tabindex="-1" aria-label="Choose Tuesday, January 1st, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   1<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--002" tabindex="-1" aria-label="Choose Wednesday, January 2nd, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   2<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--003" tabindex="-1" aria-label="Choose Thursday, January 3rd, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   3<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--004" tabindex="-1" aria-label="Choose Friday, January 4th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   4<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Saturday, January 5th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   5<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="react-datepicker__week"&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Sunday, January 6th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   6<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--007" tabindex="-1" aria-label="Choose Monday, January 7th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   7<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--008" tabindex="-1" aria-label="Choose Tuesday, January 8th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   8<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--009" tabindex="-1" aria-label="Choose Wednesday, January 9th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   9<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--010" tabindex="-1" aria-label="Choose Thursday, January 10th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   10<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--011" tabindex="-1" aria-label="Choose Friday, January 11th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   11<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--012 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Saturday, January 12th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   12<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="react-datepicker__week"&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--013 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Sunday, January 13th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   13<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--014" tabindex="-1" aria-label="Choose Monday, January 14th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   14<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--015" tabindex="-1" aria-label="Choose Tuesday, January 15th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   15<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--016" tabindex="-1" aria-label="Choose Wednesday, January 16th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   16<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--017" tabindex="-1" aria-label="Choose Thursday, January 17th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   17<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--018" tabindex="-1" aria-label="Choose Friday, January 18th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   18<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--019 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Saturday, January 19th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   19<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="react-datepicker__week"&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--020 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Sunday, January 20th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   20<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--021" tabindex="-1" aria-label="Choose Monday, January 21st, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   21<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--022" tabindex="-1" aria-label="Choose Tuesday, January 22nd, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   22<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--023" tabindex="-1" aria-label="Choose Wednesday, January 23rd, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   23<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--024" tabindex="-1" aria-label="Choose Thursday, January 24th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   24<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--025" tabindex="-1" aria-label="Choose Friday, January 25th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   25<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--026 react-datepicker__day--weekend" tabindex="-1" aria-label="Choose Saturday, January 26th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   26<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="react-datepicker__week"&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--027 react-datepicker__day--selected react-datepicker__day--weekend" tabindex="0" aria-label="Choose Sunday, January 27th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   27<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--028" tabindex="-1" aria-label="Choose Monday, January 28th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   28<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--029" tabindex="-1" aria-label="Choose Tuesday, January 29th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   29<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--030" tabindex="-1" aria-label="Choose Wednesday, January 30th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   30<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--031" tabindex="-1" aria-label="Choose Thursday, January 31st, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   31<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--001 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Friday, February 1st, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   1<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--002 react-datepicker__day--weekend react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Saturday, February 2nd, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   2<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                 &lt;div class="react-datepicker__week"&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--003 react-datepicker__day--weekend react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Sunday, February 3rd, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   3<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--004 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Monday, February 4th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   4<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--005 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Tuesday, February 5th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   5<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--006 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Wednesday, February 6th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   6<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--007 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Thursday, February 7th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   7<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--008 react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Friday, February 8th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   8<br/>
+                  &lt;/div&gt;<br/>
+                  &lt;div class="react-datepicker__day react-datepicker__day--009 react-datepicker__day--weekend react-datepicker__day--outside-month" tabindex="-1" aria-label="Choose Saturday, February 9th, 202307" role="option" aria-disabled="false"&gt;<br/>
+                   9<br/>
+                  &lt;/div&gt;<br/>
+                 &lt;/div&gt;<br/>
+                &lt;/div&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+            &lt;div class="react-datepicker__tab-loop__end" tabindex="0"&gt;&lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div id="subjectsWrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           &lt;label class="form-label" id="subjects-label"&gt;Subjects&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-9 col-sm-12"&gt;<br/>
+           &lt;div class=" css-2b097c-container" id="subjectsContainer"&gt;<br/>
+            &lt;div class="subjects-auto-complete__control css-yk16xz-control"&gt;<br/>
+             &lt;div class="subjects-auto-complete__value-container subjects-auto-complete__value-container--is-multi css-1hwfws3"&gt;<br/>
+              &lt;div class="subjects-auto-complete__placeholder css-1wa3eu0-placeholder"&gt;&lt;/div&gt;<br/>
+              &lt;div class="css-1g6gooi"&gt;<br/>
+               &lt;div class="subjects-auto-complete__input" style="display: inline-block;"&gt;<br/>
+                &lt;input autocapitalize="none" autocomplete="off" autocorrect="off" id="subjectsInput" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;"&gt;<br/>
+                &lt;div style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;"&gt;&lt;/div&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class="subjects-auto-complete__indicators css-1wy0on6"&gt;<br/>
+              &lt;span class="subjects-auto-complete__indicator-separator css-1okebmr-indicatorSeparator"&gt;&lt;/span&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div id="hobbiesWrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt; &lt;label class="form-label" id="subjects-label"&gt;Hobbies&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-9 col-sm-12"&gt;<br/>
+           &lt;div class="custom-control custom-checkbox custom-control-inline"&gt;<br/>
+            &lt;input type="checkbox" id="hobbies-checkbox-1" class="custom-control-input" value="1"&gt;&lt;label title="" for="hobbies-checkbox-1" class="custom-control-label"&gt;Sports&lt;/label&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="custom-control custom-checkbox custom-control-inline"&gt;<br/>
+            &lt;input type="checkbox" id="hobbies-checkbox-2" class="custom-control-input" value="2"&gt;&lt;label title="" for="hobbies-checkbox-2" class="custom-control-label"&gt;Reading&lt;/label&gt;<br/>
+           &lt;/div&gt;<br/>
+           &lt;div class="custom-control custom-checkbox custom-control-inline"&gt;<br/>
+            &lt;input type="checkbox" id="hobbies-checkbox-3" class="custom-control-input" value="3"&gt;&lt;label title="" for="hobbies-checkbox-3" class="custom-control-label"&gt;Music&lt;/label&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           &lt;label class="form-label" id="subjects-label"&gt;Picture&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-9 col-sm-12"&gt;<br/>
+           &lt;div class="form-file"&gt;<br/>
+            &lt;label for="uploadPicture" class="form-file-label"&gt;Select picture&lt;/label&gt;<br/>
+            &lt;input id="uploadPicture" type="file" lang="en" class="form-control-file"&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div id="currentAddress-wrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           &lt;label class="form-label" id="currentAddress-label"&gt;Current Address&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-9 col-sm-12"&gt;<br/>
+           &lt;textarea placeholder="Current Address" rows="5" cols="20" id="currentAddress" class="form-control"&gt;&lt;/textarea&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div id="stateCity-wrapper" class="mt-2 row"&gt;<br/>
+          &lt;div class="col-md-3 col-sm-12"&gt;<br/>
+           &lt;label class="form-label" id="stateCity-label"&gt;State and City&lt;/label&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-4 col-sm-12"&gt;<br/>
+           &lt;div class=" css-2b097c-container" id="state"&gt;<br/>
+            &lt;div class=" css-yk16xz-control"&gt;<br/>
+             &lt;div class=" css-1hwfws3"&gt;<br/>
+              &lt;div class=" css-1wa3eu0-placeholder"&gt;<br/>
+               Select State<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="css-1g6gooi"&gt;<br/>
+               &lt;div class="" style="display: inline-block;"&gt;<br/>
+                &lt;input autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-3-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;"&gt;<br/>
+                &lt;div style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;"&gt;&lt;/div&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class=" css-1wy0on6"&gt;<br/>
+              &lt;span class=" css-1okebmr-indicatorSeparator"&gt;&lt;/span&gt;<br/>
+              &lt;div aria-hidden="true" class=" css-tlfecz-indicatorContainer"&gt;<br/>
+               &lt;svg height="20" width="20" viewbox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r"&gt;<br/>
+                &lt;path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"&gt;&lt;/path&gt;<br/>
+               &lt;/svg&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;div class="col-md-4 col-sm-12"&gt;<br/>
+           &lt;div class=" css-14jk2my-container" id="city"&gt;<br/>
+            &lt;div class=" css-1fhf3k1-control"&gt;<br/>
+             &lt;div class=" css-1hwfws3"&gt;<br/>
+              &lt;div class=" css-1wa3eu0-placeholder"&gt;<br/>
+               Select City<br/>
+              &lt;/div&gt;<br/>
+              &lt;div class="css-1g6gooi"&gt;<br/>
+               &lt;div class="" style="display: inline-block;"&gt;<br/>
+                &lt;input disabled autocapitalize="none" autocomplete="off" autocorrect="off" id="react-select-4-input" spellcheck="false" tabindex="0" type="text" aria-autocomplete="list" value="" style="box-sizing: content-box; width: 2px; background: 0px center; border: 0px; font-size: inherit; opacity: 1; outline: 0px; padding: 0px; color: inherit;"&gt;<br/>
+                &lt;div style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 16px; font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-weight: 400; font-style: normal; letter-spacing: normal; text-transform: none;"&gt;&lt;/div&gt;<br/>
+               &lt;/div&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+             &lt;div class=" css-1wy0on6"&gt;<br/>
+              &lt;span class=" css-109onse-indicatorSeparator"&gt;&lt;/span&gt;<br/>
+              &lt;div aria-hidden="true" class=" css-tlfecz-indicatorContainer"&gt;<br/>
+               &lt;svg height="20" width="20" viewbox="0 0 20 20" aria-hidden="true" focusable="false" class="css-19bqh2r"&gt;<br/>
+                &lt;path d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"&gt;&lt;/path&gt;<br/>
+               &lt;/svg&gt;<br/>
+              &lt;/div&gt;<br/>
+             &lt;/div&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+         &lt;div class="mt-4 justify-content-end row"&gt;<br/>
+          &lt;div class="text-right col-md-2 col-sm-12"&gt;<br/>
+           &lt;button id="submit" type="submit" class="btn btn-primary"&gt;Submit&lt;/button&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/form&gt;<br/>
+       &lt;/div&gt;<br/>
+       &lt;div&gt;&lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+      &lt;div class="col-12 mt-4 col-md-3"&gt;<br/>
+       &lt;div class="sidebar-content pattern-backgound shadow widget-divider-off"&gt;<br/>
+        &lt;section id="RightSide_Advertisement" class="widget widget_text"&gt;<br/>
+         &lt;div class="Advertisement-Section"&gt;<br/>
+          &lt;div class="Katalon-Ad"&gt;<br/>
+           &lt;a id="Katalon" href="https://www.katalon.com/free-automation-tools/?utm_source=demoqa&amp;utm_medium=homepage_banner&amp;utm_campaign=katalon_community" target="_blank"&gt;&lt;img class="RightSide-Ad" src="../assets/DemoQA_banner_Katalon_Free_Automation_Tools.png" width="80%" alt="Katalon Acedemy"&gt;&lt;/a&gt;<br/>
+          &lt;/div&gt;<br/>
+          &lt;br&gt;<br/>
+          &lt;div class="Google-Ad"&gt;<br/>
+           &lt;div id="Ad.Plus-300x250-1" data-google-query-id="CPSWvLz-5_wCFZ0aigMdJ5ICEg"&gt;<br/>
+            &lt;div id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-300x250-1_0__container__" style="border: 0pt none; display: inline-block; width: 300px; height: 250px;"&gt;<br/>
+             &lt;iframe frameborder="0" src="https://8053b1a54dd3c26e25260f8a7f26937d.safeframe.googlesyndication.com/safeframe/1-0-40/html/container.html" id="google_ads_iframe_/21849154601,22343295815/Ad.Plus-300x250-1_0" title="3rd party ad content" name="" scrolling="no" marginwidth="0" marginheight="0" width="300" height="250" data-is-safeframe="true" sandbox="allow-forms allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation" role="region" aria-label="Advertisement" tabindex="0" data-google-container-id="3" style="border: 0px; vertical-align: bottom;" data-load-complete="true"&gt;&lt;/iframe&gt;<br/>
+            &lt;/div&gt;<br/>
+           &lt;/div&gt;<br/>
+          &lt;/div&gt;<br/>
+         &lt;/div&gt;<br/>
+        &lt;/section&gt;<br/>
+       &lt;/div&gt;<br/>
+      &lt;/div&gt;<br/>
+     &lt;/div&gt;<br/>
+    &lt;/div&gt;<br/>
+   &lt;/div&gt;<br/>
+   &lt;footer&gt;<br/>
+    &lt;span&gt;© 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.&lt;/span&gt;<br/>
+   &lt;/footer&gt;<br/>
+  &lt;/div&gt;<br/>
+  &lt;script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&amp;render=explicit" async defer&gt;&lt;/script&gt;<br/>
+  &lt;script src="/bundle.js"&gt;&lt;/script&gt;<br/>
+  &lt;div&gt;<br/>
+   &lt;iframe src="https://google-bidout-d.openx.net/w/1.0/pd?plm=5" width="0" height="0" style="display:none;"&gt;&lt;/iframe&gt;<br/>
+  &lt;/div&gt;&lt;iframe src="https://gum.criteo.com/syncframe?origin=publishertagids&amp;topUrl=demoqa.com#{&quot;uid&quot;:{&quot;origin&quot;:0},&quot;lwid&quot;:{&quot;origin&quot;:0},&quot;bundle&quot;:{&quot;origin&quot;:0},&quot;optout&quot;:{&quot;value&quot;:false,&quot;origin&quot;:0},&quot;sid&quot;:{&quot;origin&quot;:0},&quot;tld&quot;:&quot;demoqa.com&quot;,&quot;topUrl&quot;:&quot;demoqa.com&quot;,&quot;version&quot;:134,&quot;cw&quot;:true,&quot;lsw&quot;:true,&quot;origin&quot;:&quot;publishertagids&quot;,&quot;requestId&quot;:&quot;0.13865847583640445&quot;}" width="0" height="0" frameborder="0" title="Criteo GUM iframe" style="border-width: 0px; margin: 0px; display: none;"&gt;&lt;/iframe&gt;&lt;iframe src="https://www.google.com/recaptcha/api2/aframe" width="0" height="0" style="display: none;"&gt;&lt;/iframe&gt;&lt;iframe id="google_esf" name="google_esf" src="https://googleads.g.doubleclick.net/pagead/html/r20230124/r20190131/zrt_lookup.html" style="display: none;"&gt;&lt;/iframe&gt;<br/>
+ &lt;/body&gt;<br/>
+&lt;/html&gt;</code></pre></div></body></html>

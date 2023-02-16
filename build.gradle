@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'test-report-aggregation'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-core
+    implementation group: 'net.serenity-bdd', name: 'serenity-core', version: '3.4.3'
+    // https://mvnrepository.com/artifact/net.serenity-bdd/serenity-cucumber
+    testImplementation 'org.junit.platform:junit-platform-launcher:1.8.2'
+    testImplementation 'net.serenity-bdd:serenity-cucumber:3.4.3'
+    testImplementation 'junit:junit:4.13.2'
+    implementation 'org.slf4j:slf4j-api:2.0.3'
+    implementation 'org.slf4j:slf4j-simple:2.0.3'
+    compileOnly 'org.projectlombok:lombok:1.18.22'
+    annotationProcessor 'org.projectlombok:lombok:1.18.22'
+    implementation 'net.serenity-bdd:serenity-reports:3.4.3'
+    implementation 'net.serenity-bdd:serenity-single-page-report:3.4.3'
+
+
+
+}
+
+gradle.startParameter.continueOnFailure=true

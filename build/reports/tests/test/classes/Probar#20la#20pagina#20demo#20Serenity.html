@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Class Probar la pagina demo Serenity</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>Class Probar la pagina demo Serenity</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/default-package.html">default-package</a> &gt; Probar la pagina demo Serenity</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">1</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">19.231s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox failures" id="successRate">
+<div class="percent">0%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Failed tests</a>
+</li>
+<li>
+<a href="#tab1">Tests</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Failed tests</h2>
+<div class="test">
+<a name="Buscar un cliente"></a>
+<h3 class="failures">Buscar un cliente</h3>
+<span class="code">
+<pre>java.lang.NullPointerException: Cannot invoke &quot;net.serenitybdd.core.pages.WebElementFacade.clear()&quot; because the return value of &quot;pages.InicioPage.getTxtUser()&quot; is null
+	at Steps.BuscarClienteStep.BuscarCliente(BuscarClienteStep.java:34)
+	at Definitions.BuscarClienteDefinition.elUsuarioIntroduceUnDeClienteEnLaBarraDeBusqueda(BuscarClienteDefinition.java:25)
+	at ✽.el usuario introduce un &quot;ALFKI&quot; de cliente en la barra de busqueda(file:///C:/Users/deniw/Documents/Intellij/pruebas_2/src/test/resources/Features/buscarCliente.feature:7)
+</pre>
+</span>
+</div>
+</div>
+<div id="tab1" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="failures">Buscar un cliente</td>
+<td class="failures">19.231s</td>
+<td class="failures">failed</td>
+</tr>
+</table>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>[Test worker] INFO io.cucumber.core.plugin.SerenityReporter - Running feature from file:///C:/Users/deniw/Documents/Intellij/pruebas_2/src/test/resources/Features/buscarCliente.feature
+[Test worker] WARN io.cucumber.core.plugin.SerenityReporter - Feature from file:///C:/Users/deniw/Documents/Intellij/pruebas_2/src/test/resources/Features/buscarCliente.feature is not under the 'features' directory. Requirements report will not be correctly generated!
+[Test worker] INFO  - 
+  _____   ___   ___   _____     ___   _____     _     ___   _____   ___   ___  
+ |_   _| | __| / __| |_   _|   / __| |_   _|   /_\   | _ \ |_   _| | __| |   \ 
+   | |   | _|  \__ \   | |     \__ \   | |    / _ \  |   /   | |   | _|  | |) |
+   |_|   |___| |___/   |_|     |___/   |_|   /_/ \_\ |_|_\   |_|   |___| |___/ 
+
+Buscar un cliente(probar-la-pagina-demo-serenity;buscar-un-cliente)
+--------------------------------------------------------------------------------
+Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 4366
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1676520336.010][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+feb. 15, 2023 11:05:36 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: 107
+[Test worker] ERROR  - 
+  _____   ___   ___   _____     ___   ___   ___    ___    ___ 
+ |_   _| | __| / __| |_   _|   | __| | _ \ | _ \  / _ \  | _ \
+   | |   | _|  \__ \   | |     | _|  |   / |   / | (_) | |   /
+   |_|   |___| |___/   |_|     |___| |_|_\ |_|_\  \___/  |_|_\
+
+Buscar un cliente
+---------------------------------------------------------------
+[Test worker] ERROR  -     Test failed at step: Cuando el usuario introduce un &quot;ALFKI&quot; de cliente en la barra de busqueda
+[Test worker] ERROR  -     Cannot invoke &quot;net.serenitybdd.core.pages.WebElementFacade.clear()&quot; because the return value of &quot;pages.InicioPage.getTxtUser()&quot; is null
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.5.1</a> at 15/02/2023, 11:06:17 p. m.</p>
+</div>
+</div>
+</body>
+</html>
