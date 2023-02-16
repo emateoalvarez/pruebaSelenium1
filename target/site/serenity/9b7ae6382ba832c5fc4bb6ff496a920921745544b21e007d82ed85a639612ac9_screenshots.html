@@ -151,7 +151,7 @@
             <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 15-02-2023 22:27</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 16-02-2023 10:40</span>
     <br style="clear:left"/>
 </div>
 
@@ -210,7 +210,7 @@
 
     <div class="story-title">
         <h3>Scenario:</h3>
-        <div class="scenario">Dado que estoy en la seccion de clientes<br>Y el usuario se loguea con su "&lt;usuario&gt;" y su "&lt;contrasena&gt;"<br>Cuando el usuario introduce un "&lt;ID&gt;" de cliente en la barra de busqueda<br>Entonces se espera que se encuentre al cliente</div>
+        <div class="scenario">Y el usuario se loguea con su "&lt;usuario&gt;" y su "&lt;contrasena&gt;"<br>Cuando el usuario introduce un "&lt;ID&gt;" de cliente en la barra de busqueda<br>Entonces se espera que se encuentre al cliente</div>
     </div>
 
     <div id="beforetable"></div>
@@ -220,7 +220,7 @@
         <div class="table">
             <div class="row">
                 <div class="col-sm-10" style="padding-left:1.5em; padding-top:0.5em; padding-bottom:0.5em;">
-                    <span class="error-message error-message-title">No such element exception: Timed out after 2 seconds. Element not found</span>
+                    <span class="error-message error-message-title">Null pointer exception: Cannot invoke 'net.serenitybdd.core.pages.WebElementFacade.clear()' because the return value of 'pages.InicioPage.getTxtUser()' is null</span>
                 </div>
                 <div class="col-sm-2">
                     <a class="btn btn-warning details-button" data-toggle="collapse" href="#stacktraceModal-overall"
@@ -236,11 +236,11 @@
         <div class="collapse multi-collapse" id="stacktraceModal-overall">
             <div class="card">
                 <div class="card-header">
-                    <h4>org.openqa.selenium.NoSuchElementException </h4>
+                    <h4>java.lang.NullPointerException </h4>
                 </div>
                 <div class="card-body">
                     <div>
-                        <pre>Steps.DemoSerenityStep.loguearse(DemoSerenityStep.java:20)<br />Definitions.DemoSerenityDefinition.elUsuarioSeLogueaConSuYSu(DemoSerenityDefinition.java:22)<br />✽.el usuario se loguea con su "<usuario>" y su "<contrasena>"(file:///C:/Users/deniw/Documents/Intellij/pruebas_2/src/test/resources/Features/buscarCliente.feature:7)<br /></pre>
+                        <pre>Steps.BuscarClienteStep.BuscarCliente(BuscarClienteStep.java:32)<br />Definitions.BuscarClienteDefinition.elUsuarioIntroduceUnDeClienteEnLaBarraDeBusqueda(BuscarClienteDefinition.java:16)<br />✽.el usuario introduce un "ALFKI" de cliente en la barra de busqueda(file:///C:/Users/deniw/Documents/Intellij/pruebas_2/src/test/resources/Features/buscarCliente.feature:10)<br /></pre>
                     </div>
 
                 </div>
@@ -248,14 +248,21 @@
         </div>
     </div>
                     <div class="panel-body">
-                        <a href="pagesource2965459970297948488.html" target="_blank" class="btn btn-info">HTML Source</a>
+                        <a href="pagesource860158846440751551.html" target="_blank" class="btn btn-info">HTML Source</a>
                     </div>
             </div>
         <div class="slider-wrapper theme-default">
             <div id="slider">
-                <img src="91dc057d3b4e2fcad59a98c7ec3b5ec8d3f6db479d29ac9b0a27b21fad38975f.png" title=" 1: Buscar un cliente ({ID=ALFKI})" width="1920"/>
-                <img src="91dc057d3b4e2fcad59a98c7ec3b5ec8d3f6db479d29ac9b0a27b21fad38975f.png" title=" Y el usuario se loguea con su &quot;&lt;usuario&gt;&quot; y su &quot;&lt;contrasena&gt;&quot;" width="1920"/>
-                <img src="91dc057d3b4e2fcad59a98c7ec3b5ec8d3f6db479d29ac9b0a27b21fad38975f.png" title=" Loguearse: &lt;usuario&gt;, &lt;contrasena&gt;: <span class='error-color'>ERROR</span>" width="1920"/>
+                <img src="7ff9310a2924341cbbc9c9b8645eb67ff9acae9870a3f1ed8b2415799cb2ee8f.png" title=" 1: Buscar un cliente ({usuario=admin, contrasena=serenity, ID=ALFKI})" width="1920"/>
+                <img src="7ff9310a2924341cbbc9c9b8645eb67ff9acae9870a3f1ed8b2415799cb2ee8f.png" title=" Dado que el usuario ingresa a la pagina" width="1920"/>
+                <img src="7ff9310a2924341cbbc9c9b8645eb67ff9acae9870a3f1ed8b2415799cb2ee8f.png" title=" Abrir web" width="1920"/>
+                <img src="7ff9310a2924341cbbc9c9b8645eb67ff9acae9870a3f1ed8b2415799cb2ee8f.png" title=" Dado que el usuario ingresa a la pagina (completed)" width="1920"/>
+                <img src="7ff9310a2924341cbbc9c9b8645eb67ff9acae9870a3f1ed8b2415799cb2ee8f.png" title=" Y el usuario se loguea con su &quot;admin&quot; y su &quot;serenity&quot;" width="1920"/>
+                <img src="7ff9310a2924341cbbc9c9b8645eb67ff9acae9870a3f1ed8b2415799cb2ee8f.png" title=" Loguearse: admin, serenity" width="1920"/>
+                <img src="bcc0b4c99d4834a2e00f0c511364248fe5facd7d134c12cc11132dcc62a0eb44.png" title=" Loguearse: admin, serenity (completed)" width="1920"/>
+                <img src="bcc0b4c99d4834a2e00f0c511364248fe5facd7d134c12cc11132dcc62a0eb44.png" title=" Y el usuario se loguea con su &quot;admin&quot; y su &quot;serenity&quot; (completed)" width="1920"/>
+                <img src="bcc0b4c99d4834a2e00f0c511364248fe5facd7d134c12cc11132dcc62a0eb44.png" title=" Cuando el usuario introduce un &quot;ALFKI&quot; de cliente en la barra de busqueda" width="1920"/>
+                <img src="46336ed95c293a9a30b821e0d2946523494ec2be56df6be9403c79bc2af36a7d.png" title=" Cuando el usuario introduce un &quot;ALFKI&quot; de cliente en la barra de busqueda (completed): <span class='error-color'>ERROR</span>" width="1920"/>
             </div>
         </div>
 

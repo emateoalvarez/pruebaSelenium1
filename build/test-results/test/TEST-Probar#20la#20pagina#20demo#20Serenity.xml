@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="Probar la pagina demo Serenity" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-16T04:05:33" hostname="DESKTOP-GTDSGL0" time="19.231">
+<testsuite name="Probar la pagina demo Serenity" tests="1" skipped="0" failures="1" errors="0" timestamp="2023-02-16T15:40:23" hostname="DESKTOP-GTDSGL0" time="33.74">
   <properties/>
-  <testcase name="Buscar un cliente" classname="Probar la pagina demo Serenity" time="19.231">
+  <testcase name="Buscar un cliente" classname="Probar la pagina demo Serenity" time="33.74">
     <failure message="java.lang.NullPointerException: Cannot invoke &quot;net.serenitybdd.core.pages.WebElementFacade.clear()&quot; because the return value of &quot;pages.InicioPage.getTxtUser()&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;net.serenitybdd.core.pages.WebElementFacade.clear()&quot; because the return value of &quot;pages.InicioPage.getTxtUser()&quot; is null
-	at Steps.BuscarClienteStep.BuscarCliente(BuscarClienteStep.java:34)
-	at Definitions.BuscarClienteDefinition.elUsuarioIntroduceUnDeClienteEnLaBarraDeBusqueda(BuscarClienteDefinition.java:25)
-	at ✽.el usuario introduce un &quot;ALFKI&quot; de cliente en la barra de busqueda(file:///C:/Users/deniw/Documents/Intellij/pruebas_2/src/test/resources/Features/buscarCliente.feature:7)
+	at Steps.BuscarClienteStep.BuscarCliente(BuscarClienteStep.java:32)
+	at Definitions.BuscarClienteDefinition.elUsuarioIntroduceUnDeClienteEnLaBarraDeBusqueda(BuscarClienteDefinition.java:16)
+	at ✽.el usuario introduce un &quot;ALFKI&quot; de cliente en la barra de busqueda(file:///C:/Users/deniw/Documents/Intellij/pruebas_2/src/test/resources/Features/buscarCliente.feature:10)
 </failure>
   </testcase>
   <system-out><![CDATA[]]></system-out>
@@ -19,12 +19,21 @@
 
 Buscar un cliente(probar-la-pagina-demo-serenity;buscar-un-cliente)
 --------------------------------------------------------------------------------
-Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 4366
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Starting Chrome driver instance with capabilities:
+[Test worker] INFO net.serenitybdd.core.webdriver.driverproviders.ChromeDriverProvider - Capabilities {acceptInsecureCerts: false, browserName: chrome, goog:chromeOptions: {args: [], extensions: []}}
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 1196
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-[1676520336.010][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
-feb. 15, 2023 11:05:36 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+[1676562025.821][WARNING]: This version of ChromeDriver has not been tested with Chrome version 110.
+feb. 16, 2023 10:40:25 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: 107
+Starting ChromeDriver 109.0.5414.74 (e7c5703604daa9cc128ccf5a5d3e993513758913-refs/branch-heads/5414@{#1172}) on port 1968
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1676562048.938][WARNING]: This version of ChromeDriver has not been tested with Chrome version 110.
+feb. 16, 2023 10:40:50 A. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
 WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: 107
 [Test worker] ERROR  - 
   _____   ___   ___   _____     ___   ___   ___    ___    ___ 
