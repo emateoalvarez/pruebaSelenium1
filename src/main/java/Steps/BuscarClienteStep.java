@@ -4,9 +4,7 @@ import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.CustomerPage;
-import pages.GeneralPage;
 import pages.InicioPage;
-import pages.PrincipalPage;
 
 public class BuscarClienteStep {
 

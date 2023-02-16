@@ -6,7 +6,6 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 @Getter
 public class CustomerPage extends PageObject {
-    //body/aside[@id='s-sidebar']/div[2]/div[2]/div[1]/ul[1]/li[2]/ul[1]/li[1]/a[1]
     @FindBy(xpath = "//body/aside[@id='s-sidebar']/div[2]/div[2]/div[1]/ul[1]/li[2]/ul[1]/li[1]/a[1]")
     private WebElementFacade lblNorthwind;
 

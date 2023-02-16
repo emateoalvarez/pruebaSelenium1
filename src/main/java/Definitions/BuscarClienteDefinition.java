@@ -1,9 +1,7 @@
 package Definitions;
 
 import Steps.BuscarClienteStep;
-import Steps.DemoSerenityStep;
 import io.cucumber.java.es.Cuando;
-import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
 import net.thucydides.core.annotations.Steps;
 

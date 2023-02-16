@@ -29,19 +29,4 @@ public class DemoSerenityStep {
         principalPage.getImgAccount().click();
         return principalPage.getLblAccount().isDisplayed();
     }
-
-    @Step
-    public void abrirNorthwindSection(){
-        //customerPage.getLblNorthwind().click();
-    }
-
-    @Step
-    public void AbrirCustomerSection(){
-        //customerPage.getLblCustomer().click();
-    }
-
-    @Step
-    public void BuscarCliente(String id){
-        //customerPage.getTxtSearchCustomer().sendKeys(id);
-    }
 }
